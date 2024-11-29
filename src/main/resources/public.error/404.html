@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e293b, #64748b);
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Error Container */
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .error-container h1 {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff4d6d;
+            margin-bottom: 20px;
+        }
+
+        .error-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #f1f5f9;
+        }
+
+        .home-link {
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff6b6b, #ff9068);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .error-container h1 {
+                font-size: 6rem;
+            }
+
+            .error-container p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <h1>404</h1>
+    <p>Oops! The page you're looking for can't be found.</p>
+    <a href="/" class="home-link">Go Back Home</a>
+</div>
+</body>
+</html>
